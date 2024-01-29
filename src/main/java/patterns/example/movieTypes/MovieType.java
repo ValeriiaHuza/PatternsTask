@@ -1,6 +1,8 @@
 package patterns.example.movieTypes;
 
-public abstract class MovieType {
+import java.io.Serializable;
+
+public abstract class MovieType implements Serializable {
 
 //    public enum MovieType {
 //        REGULAR, THRILLER, COMEDY, DRAMA

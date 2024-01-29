@@ -2,11 +2,12 @@ package patterns.example;
 
 import patterns.example.movieTypes.MovieType;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class MovieCatalog {
+public class MovieCatalog implements Serializable {
 
     List<Movie> catalog;
 
