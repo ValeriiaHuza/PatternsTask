@@ -3,6 +3,7 @@ package patterns.example.templateMethod;
 import patterns.example.Customer;
 
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
@@ -14,9 +15,9 @@ public class HTMLWriter extends Writer{
 
     @Override
     public void write() {
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("statement.html"))){
+        try (FileWriter out = new FileWriter("statement.html")){
             super.statement();
-            out.writeObject(super.getResult());
+            out.write(super.getResult());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

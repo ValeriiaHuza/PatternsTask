@@ -11,9 +11,9 @@ public class FileWriter extends Writer{
 
     @Override
     public void write() {
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("statement.txt"))){
+        try (java.io.FileWriter out = new java.io.FileWriter("statement.txt")){
             super.statement();
-            out.writeObject(super.getResult());
+            out.write(super.getResult());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
