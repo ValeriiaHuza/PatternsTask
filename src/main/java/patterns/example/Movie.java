@@ -7,17 +7,11 @@ import java.util.List;
 public class Movie {
     private String title;
     private MovieType priceCode;
-
     private String country;
-
     private String director;
-
     private List<String> actors;
-
-
     private Movie() {
     }
-
     @Override
     public String toString() {
         return "Movie{" +
